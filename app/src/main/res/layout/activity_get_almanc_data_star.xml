@@ -1,0 +1,533 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ActivityGetAlmanacData"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtAlmanacTimeOfObservation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtAlmanacBodyObserved"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/gha_body"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacGhaDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacGhaMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/inc"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacIncDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacIncMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/sha"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacShaDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacShaMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/dec_body"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacDecDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtAlmanacDecMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbAlmanacDecNs"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/lat_array"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtSextantAngle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/ie"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtIeDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtIeMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbIeOnOff"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/on_off"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/dip"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtDipDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtDipMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbDipPlusMinus"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/plus_minus"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAlamancCalcApparentAlt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Apparent Altitude"
+            android:onClick="clkAlamancCalcApparentAlt" />
+
+        <TextView
+            android:id="@+id/txtApparentAltitude"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/adj"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtTcDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtTcMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbTcPlusMinus"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/plus_minus"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="AC"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtAcDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtAcMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbAcPlusMinus"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/plus_minus"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="ARC"
+                android:gravity="right"/>
+
+            <EditText
+                android:id="@+id/txtArcDeg"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Deg"
+                android:inputType="number"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/degree_sign"/>
+
+            <EditText
+                android:id="@+id/txtArcMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:hint="Min"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minute_sign"/>
+
+            <Spinner
+                android:id="@+id/cmbArcPlusMinus"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:entries="@array/plus_minus"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAlmanacSubmitData"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Almanac Data"
+            android:onClick="clkSubmitAlmanacData" />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="50dp"
+    tools:context=".ActivityRecordAltitudes"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="70dp"
+        android:paddingLeft="70dp">
+
+        <TextView
+            android:id="@+id/txtRaTimeOfObservation"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtRaBodyObserved"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="70dp"
+        android:paddingLeft="70dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Sextant Alt"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/txtRaSextAltDeg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="00"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/degree_sign"/>
+
+        <EditText
+            android:id="@+id/txtRaSextAltMin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:hint="00.0"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minute_sign"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="70dp"
+        android:paddingLeft="70dp">
+
+
+        <Button
+            android:id="@+id/btnRaSubmitAdvance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clkSubmitAdvance"
+            android:text="Submit altitude"/>
+
+        <Button
+            android:id="@+id/btnRaSubmitReturn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clkSubmitReturn"
+            android:text="Submit altitude and return to Starfinder"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRaShipMovement"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/lstObservations"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>
